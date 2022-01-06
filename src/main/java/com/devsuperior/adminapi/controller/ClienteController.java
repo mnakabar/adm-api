@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/clientes")
 public class ClienteController {
 
@@ -18,6 +18,7 @@ public class ClienteController {
 
     @GetMapping
     public List<Cliente> cliente (){
+
         return  clienteRepository.findAll();
     }
     @PostMapping
